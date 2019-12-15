@@ -9,7 +9,7 @@ import org.springframework.context.annotation.PropertySource;
 import javax.sql.DataSource;
 
 /**
- * java配置的方式
+ * java配置的方式代替xml配置
  */
 @Configuration
 @PropertySource("classpath:jdbc.properties")
