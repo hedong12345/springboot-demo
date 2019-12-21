@@ -9,7 +9,7 @@
         <module name="spingboot-demo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
+    <bytecodeTargetLevel>
       <module name="spingboot-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>

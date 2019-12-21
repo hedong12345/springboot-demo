@@ -1,3 +1,4 @@
+/*
 package cn.itcast.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
@@ -7,9 +8,11 @@ import org.springframework.context.annotation.Configuration;
 
 import javax.sql.DataSource;
 
+*/
 /**
  * java配置的方式代替xml配置
- */
+ *//*
+
 @Configuration
 //@PropertySource("classpath:application.properties")
 //@EnableConfigurationProperties(JdbcProperties.class)
@@ -49,4 +52,5 @@ public class JdbcConfigV2 {
     public DataSource dateSource() {
         return new DruidDataSource();
     }
-}
+//}
+*/
