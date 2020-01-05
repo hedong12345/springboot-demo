@@ -13,7 +13,6 @@ public class HelloControllerV2 {
     @GetMapping("getHello")
     public String hello(){
         logger.warn("hello method is running");
-
         return "hello,this is my spring boot project! ";
     }
 }
