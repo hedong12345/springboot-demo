@@ -1,6 +1,6 @@
 package cn.itcast.config;
 
-import cn.itcast.intercepter.MyIntercerpter;
+import cn.itcast.intercepter.MyIntercepter;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -12,6 +12,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class MvcConfig implements WebMvcConfigurer{
 
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new MyIntercerpter()).addPathPatterns("/**");
+        registry.addInterceptor(new MyIntercepter()).addPathPatterns("/**");
     }
 }

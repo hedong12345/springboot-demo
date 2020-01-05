@@ -10,24 +10,28 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * 自定义拦截器
+ *
+ * @author d.he
+ * @date 2020.01.03
  */
-public class MyIntercerpter implements HandlerInterceptor{
 
-    private final static Logger logger = LoggerFactory.getLogger(MyIntercerpter.class);
+public class MyIntercepter implements HandlerInterceptor{
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(MyIntercepter.class);
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
-        logger.debug("preHandle method is running");
+        LOGGER.debug("preHandle method is running");
         return true;
     }
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) {
-        logger.debug("postHandle method is running");
+        LOGGER.debug("postHandle method is running");
     }
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
-        logger.debug("afterCompletion method is running");
+        LOGGER.debug("afterCompletion method is running");
     }
 }
