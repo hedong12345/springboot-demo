@@ -1,5 +1,8 @@
 package cn.itcast.mapper;
 
-public interface UserMapper {
+import cn.itcast.pojo.User;
+import tk.mybatis.mapper.common.Mapper;
+
+public interface UserMapper extends Mapper<User> {
 
 }
