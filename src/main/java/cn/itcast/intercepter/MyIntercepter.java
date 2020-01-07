@@ -12,10 +12,10 @@ import javax.servlet.http.HttpServletResponse;
  * 自定义拦截器
  *
  * @author d.he
- * @date 2020.01.03
+ * @date 2020/01/03
  */
 
-public class MyIntercepter implements HandlerInterceptor{
+public class MyIntercepter implements HandlerInterceptor {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(MyIntercepter.class);
 

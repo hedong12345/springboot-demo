@@ -16,6 +16,6 @@ public class UserMapperTest {
     @Test
     public void testQuery() {
         User user = userMapper.selectByPrimaryKey(2L);
-        System.out.printf(user);
+        System.out.println(user);
     }
 }
