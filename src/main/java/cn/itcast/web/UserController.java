@@ -5,7 +5,6 @@ import cn.itcast.dto.ServiceStatus;
 import cn.itcast.pojo.User;
 import cn.itcast.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -13,9 +12,9 @@ import org.springframework.web.bind.annotation.*;
  * @date 2020/01/03
  *
  */
-@Controller
+@RestController
 @RequestMapping("user")
-public class HelloController {
+public class UserController {
 
 //    @Autowired
 //    private DataSource dataSource;
@@ -24,7 +23,6 @@ public class HelloController {
     private UserService userService;
 
     @GetMapping("{id}")
-    @ResponseBody
     public Response<User> getUser(@PathVariable("id") Long id){
         Response<User> response = new Response<>(ServiceStatus.SUCCESS,null);
         User user = userService.queryById(id);
