@@ -10,6 +10,7 @@ import javax.persistence.Table;
 @Data
 @Table(name = "tb_user")
 public class User {
+
     @Id
     @KeySql(useGeneratedKeys = true)
     private Integer id;

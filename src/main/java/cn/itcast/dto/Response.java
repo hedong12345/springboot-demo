@@ -5,11 +5,17 @@ package cn.itcast.dto;
  * @date 2020/1/8
  */
 public class Response<T> {
-
+    /**
+     * 状态码
+     */
     private Integer code;
-
+    /**
+     * 返回信息
+     */
     private String msg;
-
+    /**
+     * 返回数据
+     */
     private T data;
 
     public Response(Integer code, String msg, T data){

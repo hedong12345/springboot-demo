@@ -23,11 +23,9 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("{id}")
-    public Response<User> getUser(@PathVariable("id") Long id){
-        Response<User> response = new Response<>(ServiceStatus.SUCCESS,null);
+    public User getUser(@PathVariable("id") Long id){
         User user = userService.queryById(id);
-        response.setData(user);
-        return response;
+        return user;
     }
 
     @GetMapping("add/user")
