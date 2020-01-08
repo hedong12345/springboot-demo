@@ -1,5 +1,7 @@
 package cn.itcast.web;
 
+import cn.itcast.dto.Response;
+import cn.itcast.dto.ServiceStatus;
 import cn.itcast.pojo.User;
 import cn.itcast.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +25,21 @@ public class HelloController {
 
     @GetMapping("{id}")
     @ResponseBody
-    public User hello(@PathVariable("id") Long id){
-        return userService.queryById(id);
+    public Response<User> getUser(@PathVariable("id") Long id){
+        Response<User> response = new Response<>(ServiceStatus.SUCCESS,null);
+        User user = userService.queryById(id);
+        response.setData(user);
+        return response;
+    }
+
+    @GetMapping("add/user")
+    @ResponseBody
+    public Response addUser(@RequestBody User user){
+        Response response=new Response(ServiceStatus.SUCCESS, null);
+        Integer id = userService.insertUser(user);
+        if (null == id){
+            return new Response(ServiceStatus.FAIL, null);
+        }
+        return response;
     }
 }

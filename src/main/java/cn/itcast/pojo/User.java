@@ -6,7 +6,6 @@ import tk.mybatis.mapper.annotation.KeySql;
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Data
 @Table(name = "tb_user")
@@ -34,6 +33,6 @@ public class User {
     /**
      * 不需要持久化的字段
      */
-    @Transient
+    //@Transient
     private String note;
 }
